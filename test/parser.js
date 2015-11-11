@@ -19,32 +19,32 @@ var mon = new Date('May 13, 2013 01:30:00');
  * Minutes
  */
 
-describe('minutes', function () {
-  it('10m', function () {
+describe('minutes', function() {
+  it('10m', function() {
     var date = parse('10m', mon);
     assert('1:40:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('10min', function () {
+  it('10min', function() {
     var date = parse('10min', mon);
     assert('1:40:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('10 minutes', function () {
+  it('10 minutes', function() {
     var date = parse('10 minutes', mon);
     assert('1:40:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('10 minutes from now', function () {
+  it('10 minutes from now', function() {
     var date = parse('10 minutes from now', mon);
     assert('1:40:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('10 minutes starting tomorrow', function () {
+  it('10 minutes starting tomorrow', function() {
     var date = parse('10 minutes starting tomorrow', mon);
     assert('1:40:00' == t(date));
     assert('5/14/13' == d(date));
@@ -56,55 +56,55 @@ describe('minutes', function () {
  */
 
 describe('hours', function() {
-  it('in 5 hours', function () {
+  it('in 5 hours', function() {
     var date = parse('in 5 hours', mon);
     assert('6:30:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at 5am', function () {
+  it('at 5am', function() {
     var date = parse('5am', mon);
     assert('5:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at 5pm', function () {
+  it('at 5pm', function() {
     var date = parse('5pm', mon);
     assert('17:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at5', function () {
+  it('at5', function() {
     var date = parse('at5', mon);
     assert('5:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at 17', function () {
+  it('at 17', function() {
     var date = parse('at 17', mon);
     assert('17:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at 12:30', function () {
+  it('at 12:30', function() {
     var date = parse('at 12:30', mon);
     assert('12:30:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at 12.30', function () {
+  it('at 12.30', function() {
     var date = parse('at 12.30', mon);
     assert('12:30:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at 23:35', function () {
+  it('at 23:35', function() {
     var date = parse('at 23:35', mon);
     assert('23:35:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('at 0:30', function () {
+  it('at 0:30', function() {
     var date = parse('at 0:30', mon);
     assert('0:30:00' == t(date));
     assert('5/14/13' == d(date));
@@ -115,14 +115,14 @@ describe('hours', function() {
  * Days
  */
 
-describe('days', function () {
-  it('in 2 days', function () {
+describe('days', function() {
+  it('in 2 days', function() {
     var date = parse('in 2 days', mon);
     assert('1:30:00' == t(date));
     assert('5/15/13' == d(date));
   });
 
-  it('in 2d', function () {
+  it('in 2d', function() {
     var date = parse('in 2d', mon);
     assert('1:30:00' == t(date));
     assert('5/15/13' == d(date));
@@ -133,50 +133,50 @@ describe('days', function () {
  * Dates
  */
 
-describe('dates', function () {
-  it('tuesday at 9am', function () {
+describe('dates', function() {
+  it('tuesday at 9am', function() {
     var date = parse('tuesday at 9am', mon);
     assert('9:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('monday at 9am', function () {
+  it('monday at 9am', function() {
     var date = parse('monday at 9am', mon);
     assert('9:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('Monday at 9am', function () {
+  it('Monday at 9am', function() {
     var date = parse('Monday at 9am', mon);
     assert('9:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('monday at 9', function () {
+  it('monday at 9', function() {
     var date = parse('monday at 9', mon);
     assert('9:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('monday at 21', function () {
+  it('monday at 21', function() {
     var date = parse('monday at 21', mon);
     assert('21:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('monday at 1:00am', function () {
+  it('monday at 1:00am', function() {
     var date = parse('monday at 1:00am', mon);
     assert('1:00:00' == t(date));
     assert('5/20/13' == d(date));
   });
 
-  it('next monday at 1:00am', function () {
+  it('next monday at 1:00am', function() {
     var date = parse('next monday at 1:00am', mon);
     assert('1:00:00' == t(date));
     assert('5/20/13' == d(date));
   });
 
-  it('last monday at 1:00am', function () {
+  it('last monday at 1:00am', function() {
     var date = parse('last monday at 1:00am', mon);
     assert('1:00:00' == t(date));
     assert('5/6/13' == d(date));
@@ -187,8 +187,8 @@ describe('dates', function () {
  * Tomorrow
  */
 
-describe('tomorrow', function () {
-  it('tomorrow at 3pm', function () {
+describe('tomorrow', function() {
+  it('tomorrow at 3pm', function() {
     var date = parse('tomorrow at 3pm', mon);
     assert('15:00:00' == t(date));
     assert('5/14/13' == d(date));
@@ -199,20 +199,20 @@ describe('tomorrow', function () {
  * Yesterday
  */
 
-describe('yesterday', function () {
-  it('yesterday at 3pm', function () {
+describe('yesterday', function() {
+  it('yesterday at 3pm', function() {
     var date = parse('yesterday at 3pm', mon);
     assert('15:00:00' == t(date));
     assert('5/12/13' == d(date));
   });
 
-  it('yesterday at 15', function () {
+  it('yesterday at 15', function() {
     var date = parse('yesterday at 15', mon);
     assert('15:00:00' == t(date));
     assert('5/12/13' == d(date));
   });
 
-  it('yesterday at 12:30am', function () {
+  it('yesterday at 12:30am', function() {
     var date = parse('yesterday at 12:30am', mon);
     assert('0:30:00' == t(date));
     assert('5/12/13' == d(date));
@@ -223,20 +223,20 @@ describe('yesterday', function () {
  * Tonight
  */
 
-describe('tonight', function () {
-  it('5pm tonight', function () {
+describe('tonight', function() {
+  it('5pm tonight', function() {
     var date = parse('5pm tonight', mon);
     assert('17:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('tonight at 5pm', function () {
+  it('tonight at 5pm', function() {
     var date = parse('tonight at 5pm', mon);
     assert('17:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('tonight at 5', function () {
+  it('tonight at 5', function() {
     var date = parse('tonight at 5', mon);
     assert('17:00:00' == t(date));
     assert('5/13/13' == d(date));
@@ -246,21 +246,21 @@ describe('tonight', function () {
 /**
  * Midnight
  */
-describe('mightnight', function () {
-  it('midnight', function () {
+describe('mightnight', function() {
+  it('midnight', function() {
     var date = parse('midnight', mon);
 
     assert('0:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('tomorrow at midnight', function () {
+  it('tomorrow at midnight', function() {
     var date = parse('tomorrow at midnight', mon);
     assert('0:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('midnight (@ 1:30pm)', function () {
+  it('midnight (@ 1:30pm)', function() {
     var afternoon = new Date('May 13, 2013 13:30:00')
     var date = parse('midnight', afternoon);
     assert('0:00:00' == t(date));
@@ -272,20 +272,20 @@ describe('mightnight', function () {
  * Noon
  */
 
-describe('noon', function () {
-  it('noon', function () {
+describe('noon', function() {
+  it('noon', function() {
     var date = parse('noon', mon);
     assert('12:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('tomorrow at noon', function () {
+  it('tomorrow at noon', function() {
     var date = parse('tomorrow at noon', mon);
     assert('12:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('noon (@ 1:30pm)', function () {
+  it('noon (@ 1:30pm)', function() {
     var afternoon = new Date('May 13, 2013 13:30:00')
     var date = parse('noon', afternoon);
     assert('12:00:00' == t(date));
@@ -297,26 +297,26 @@ describe('noon', function () {
  * Weeks
  */
 
-describe('weeks', function () {
-  it('next week tuesday', function () {
+describe('weeks', function() {
+  it('next week tuesday', function() {
     var date = parse('next week tuesday', mon);
     assert('1:30:00' == t(date));
     assert('5/21/13' == d(date));
   });
 
-  it('next wk tuesday', function () {
+  it('next wk tuesday', function() {
     var date = parse('next week tuesday', mon);
     assert('1:30:00' == t(date));
     assert('5/21/13' == d(date));
   });
 
-  it('next week tuesday at 4:30pm', function () {
+  it('next week tuesday at 4:30pm', function() {
     var date = parse('next week tuesday at 4:30pm', mon);
     assert('16:30:00' == t(date));
     assert('5/21/13' == d(date));
   });
 
-  it('2 weeks from wednesday', function () {
+  it('2 weeks from wednesday', function() {
     var date = parse('2 weeks from wednesday', mon);
     assert('1:30:00' == t(date));
     assert('5/29/13' == d(date));
@@ -328,25 +328,25 @@ describe('weeks', function () {
  */
 
 describe('night', function() {
-  it('night', function () {
+  it('night', function() {
     var date = parse('night', mon);
     assert('19:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('tomorrow night', function () {
+  it('tomorrow night', function() {
     var date = parse('tomorrow night', mon);
     assert('19:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('tomorrow night at 9', function () {
+  it('tomorrow night at 9', function() {
     var date = parse('tomorrow night at 9', mon);
     assert('21:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('last night', function () {
+  it('last night', function() {
     var date = parse('last night', mon);
     assert('19:00:00' == t(date));
     assert('5/12/13' == d(date));
@@ -358,25 +358,25 @@ describe('night', function() {
  */
 
 describe('evening', function() {
-  it('evening', function () {
+  it('evening', function() {
     var date = parse('evening', mon);
     assert('17:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('tomorrow evening', function () {
+  it('tomorrow evening', function() {
     var date = parse('tomorrow evening', mon);
     assert('17:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('tomorrow evening at 9', function () {
+  it('tomorrow evening at 9', function() {
     var date = parse('tomorrow evening at 9', mon);
     assert('21:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('last evening', function () {
+  it('last evening', function() {
     var date = parse('last evening', mon);
     assert('17:00:00' == t(date));
     assert('5/12/13' == d(date));
@@ -388,19 +388,19 @@ describe('evening', function() {
  */
 
 describe('afternoon', function() {
-  it('afternoon', function () {
+  it('afternoon', function() {
     var date = parse('afternoon', mon);
     assert('14:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('tomorrow afternoon', function () {
+  it('tomorrow afternoon', function() {
     var date = parse('tomorrow afternoon', mon);
     assert('14:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('last afternoon', function () {
+  it('last afternoon', function() {
     var date = parse('last afternoon', mon);
     assert('14:00:00' == t(date));
     assert('5/12/13' == d(date));
@@ -412,25 +412,25 @@ describe('afternoon', function() {
  */
 
 describe('morning', function() {
-  it('morning', function () {
+  it('morning', function() {
     var date = parse('morning', mon);
     assert('8:00:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('tomorrow morning', function () {
+  it('tomorrow morning', function() {
     var date = parse('tomorrow morning', mon);
     assert('8:00:00' == t(date));
     assert('5/14/13' == d(date));
   });
 
-  it('last morning', function () {
+  it('last morning', function() {
     var date = parse('last morning', mon);
     assert('8:00:00' == t(date));
     assert('5/12/13' == d(date));
   });
 
-  it('this morning at 9', function () {
+  it('this morning at 9', function() {
     var date = parse('this morning at 9', mon);
     assert('9:00:00' == t(date));
     assert('5/13/13' == d(date));
@@ -441,48 +441,48 @@ describe('morning', function() {
  * Months
  */
 
-describe('months', function () {
-  it('this month', function () {
+describe('months', function() {
+  it('this month', function() {
     var date = parse('this month', mon);
     assert('1:30:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('next month', function () {
+  it('next month', function() {
     var date = parse('next month', mon);
     assert('1:30:00' == t(date));
     assert('6/13/13' == d(date));
   });
 
-  it('last month', function () {
+  it('last month', function() {
     var date = parse('last month', mon);
     assert('1:30:00' == t(date));
     assert('4/13/13' == d(date));
   });
 
-  it('2 months from tomorrow', function () {
+  it('2 months from tomorrow', function() {
     var date = parse('2 months from tomorrow', mon);
     assert('1:30:00' == t(date));
     assert('7/14/13' == d(date));
   });
 
-  it('2 monthes from tomorrow (misspelling)', function () {
+  it('2 monthes from tomorrow (misspelling)', function() {
     var date = parse('2 monthes from tomorrow', mon);
     assert('1:30:00' == t(date));
     assert('7/14/13' == d(date));
   });
 
-  it('should handle months with less days', function () {
+  it('should handle months with less days', function() {
     var date = parse('1 month', new Date('01/31/2011'));
     assert('2/28/11' == d(date))
   });
 
-  it('should handle leap year', function () {
+  it('should handle leap year', function() {
     var date = parse('1 month', new Date('01/31/2012'));
     assert('2/29/12' == d(date));
   });
 
-  it('tomorrow afternoon at 4:30pm 1 month from now', function () {
+  it('tomorrow afternoon at 4:30pm 1 month from now', function() {
     var date = parse('tomorrow afternoon at 4:30pm 1 month from now', mon);
     assert('16:30:00' == t(date));
     assert('6/14/13' == d(date));
@@ -500,19 +500,19 @@ describe('year', function() {
     assert('5/13/13' == d(date));
   });
 
-  it('next year', function () {
+  it('next year', function() {
     var date = parse('next year', mon);
     assert('1:30:00' == t(date));
     assert('5/13/14' == d(date));
   });
 
-  it('last year', function () {
+  it('last year', function() {
     var date = parse('last year', mon);
     assert('1:30:00' == t(date));
     assert('5/13/12' == d(date));
   });
 
-  it('2 years from yesterday at 5pm', function () {
+  it('2 years from yesterday at 5pm', function() {
     var date = parse('2 years from yesterday at 5pm', mon);
     assert('17:00:00' == t(date));
     assert('5/12/15' == d(date));
@@ -552,7 +552,7 @@ describe('dates in the past', function() {
 
   // Need to place .nextTime() at the end
 
-  it('3pm tomorrow afternoon', function () {
+  it('3pm tomorrow afternoon', function() {
     var date = parse('3pm tomorrow afternoon', past);
     assert('15:00:00' == t(date));
     assert('5/14/13' == d(date));
@@ -563,19 +563,19 @@ describe('dates in the past', function() {
  * Times
  */
 describe('times', function() {
-  it('1:30', function () {
+  it('1:30', function() {
     var date = parse('1:30', mon);
     assert('1:30:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('2:31', function () {
+  it('2:31', function() {
     var date = parse('2:31', mon);
     assert('2:31:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('00:28', function () {
+  it('00:28', function() {
     // past time will result in tomorrow
     var date = parse('00:28', mon);
     assert('0:28:00' == t(date));
@@ -587,7 +587,7 @@ describe('times', function() {
  * Ignore other input
  */
 
-describe('other inputs', function () {
+describe('other inputs', function() {
   it('yesterday, 2 years ago--.', function() {
     var date = parse('yesterday, 2 years ago--.', mon);
     assert('1:30:00' == t(date));
@@ -609,8 +609,8 @@ describe('other inputs', function () {
  * Bug fixes
  */
 
-describe('bug fixes', function () {
-  it('at 12:30pm (fixes: #6)', function () {
+describe('bug fixes', function() {
+  it('at 12:30pm (fixes: #6)', function() {
     var after = new Date('May 13, 2013 13:30:00');
     var date = parse('at 12:30pm', after);
     assert('12:30:00' == t(date));
@@ -629,8 +629,8 @@ describe('bug fixes', function () {
  * If context is a string parse it as date
  */
 
-describe('parse context if its a string (fixes: #38)', function () {
-  it('string context', function () {
+describe('parse context if its a string (fixes: #38)', function() {
+  it('string context', function() {
     var today = new Date();
     today.setDate(today.getDate() - 1);
     var date = parse('today at 11am', 'yesterday at 12:30am');
@@ -645,28 +645,28 @@ describe('parse context if its a string (fixes: #38)', function () {
  * Support for dates with months
  */
 
-describe('months (fixes: #10)', function (){
+describe('months (fixes: #10)', function() {
   var after = new Date('May 13, 2013 13:30:00');
-  it('2nd of January', function () {
+  it('2nd of January', function() {
     var date = parse('2nd of January 12:30', after);
     assert('12:30:00' == t(date));
     assert('1/2/13' == d(date));
   });
 
-  it('1st of March', function () {
+  it('1st of March', function() {
     var date = parse('1st of March', after);
     assert('13:30:00' == t(date));
     assert('3/1/13' == d(date));
   });
 
-  it('31st of September 4:00am', function () {
+  it('31st of September 4:00am', function() {
     var date = parse('31st of September 4:00am', after);
     assert('4:00:00' == t(date));
     assert('9/31/13' != d(date));
     assert('9/30/13' == d(date));
   });
 
-  it('1st of January 4:00am', function(){
+  it('1st of January 4:00am', function() {
     var date = parse('1st of January 4:00am', after);
     assert('4:00:00' == t(date));
     assert('1/1/13' == d(date));
@@ -677,53 +677,53 @@ describe('months (fixes: #10)', function (){
  * Suppport 'ago' modifier
  */
 
-describe('support "ago" modifier (fixes: #20)', function (){
+describe('support "ago" modifier (fixes: #20)', function() {
   var after = new Date('May 13, 2013 13:30:00');
 
-  it('x seconds ago', function () {
+  it('x seconds ago', function() {
     var date = parse('10 seconds ago', after);
     assert('13:29:50' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('x minutes ago', function () {
+  it('x minutes ago', function() {
     var date = parse('5 minutes ago', after);
     assert('13:25:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
 
-  it('x minute ago', function () {
+  it('x minute ago', function() {
     var date = parse('1 minutes ago', after);
     assert('13:29:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('x hours ago', function () {
+  it('x hours ago', function() {
     var date = parse('5 hours ago', after);
     assert('8:30:00' == t(date));
     assert('5/13/13' == d(date));
   });
 
-  it('x days ago', function () {
+  it('x days ago', function() {
     var date = parse('5 day ago', after);
     assert('13:30:00' == t(date));
     assert('5/8/13' == d(date));
   });
 
-  it('x week ago', function () {
+  it('x week ago', function() {
     var date = parse('2 week ago', after);
     assert('13:30:00' == t(date));
     assert('4/29/13' == d(date));
   });
 
-  it('x months ago', function () {
+  it('x months ago', function() {
     var date = parse('10 months ago', after);
     assert('13:30:00' == t(date));
     assert('7/13/12' == d(date));
   });
 
-  it('x year ago', function () {
+  it('x year ago', function() {
     var date = parse('10 year ago', after);
     assert('13:30:00' == t(date));
     assert('5/13/03' == d(date));
@@ -731,6 +731,37 @@ describe('support "ago" modifier (fixes: #20)', function (){
 
 });
 
+/**
+ * Written numbers reading
+ */
+
+describe('written numbers', function() {
+  it('in two days', function() {
+    var date = parse('in two days', mon);
+    assert('1:30:00' == t(date));
+    assert('5/15/13' == d(date));
+  });
+  it('tomorrow night at nine', function() {
+    var date = parse('tomorrow night at nine', mon);
+    assert('21:00:00' == t(date));
+    assert('5/14/13' == d(date));
+  });
+  it('two years from yesterday at five pm', function() {
+    var date = parse('two years from yesterday at five pm', mon);
+    assert('17:00:00' == t(date));
+    assert('5/12/15' == d(date));
+  });
+  it('two years from yesterday at 5pm', function() {
+    var date = parse('two years from yesterday at 5pm', mon);
+    assert('17:00:00' == t(date));
+    assert('5/12/15' == d(date));
+  });
+  it('two months from tomorrow', function() {
+    var date = parse('two months from tomorrow', mon);
+    assert('1:30:00' == t(date));
+    assert('7/14/13' == d(date));
+  });
+});
 
 /**
  * Time helper function
@@ -753,4 +784,3 @@ function d(date) {
   var year = '' + date.getFullYear();
   return [month, day, year.slice(2)].join('/');
 }
-
